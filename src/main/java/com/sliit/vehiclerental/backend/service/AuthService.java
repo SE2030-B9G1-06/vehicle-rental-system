@@ -5,7 +5,6 @@ import com.sliit.vehiclerental.backend.dto.AuthResponse;
 import com.sliit.vehiclerental.backend.dto.LoginRequest;
 import com.sliit.vehiclerental.backend.entity.Role;
 import com.sliit.vehiclerental.backend.entity.User;
-import com.sliit.vehiclerental.backend.repository.RoleRepository;
 import com.sliit.vehiclerental.backend.repository.UserRepository;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;

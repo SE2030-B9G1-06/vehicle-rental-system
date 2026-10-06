@@ -1,9 +1,7 @@
 package com.sliit.vehiclerental.backend.service;
 
 import com.sliit.vehiclerental.backend.entity.Vehicle;
-import com.sliit.vehiclerental.backend.entity.Branch;
 import com.sliit.vehiclerental.backend.entity.VehicleCategory;
-import com.sliit.vehiclerental.backend.repository.BranchRepository;
 import com.sliit.vehiclerental.backend.repository.VehicleCategoryRepository;
 import com.sliit.vehiclerental.backend.repository.VehicleRepository;
 import org.springframework.stereotype.Service;
