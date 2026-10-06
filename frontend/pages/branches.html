@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Location & branch management - DriveRentals</title>
+    <link rel="stylesheet" href="../assets/css/workspace.css" />
+  </head>
+  <body
+    class="workspace-page"
+    style="--workspace-image: url(&quot;/assets/images/branches.jpg&quot;)"
+  >
+    <div id="navbar-placeholder"></div>
+    <main class="workspace">
+      <header class="workspace-head">
+        <div>
+          <p class="eyebrow">DriveRentals / Operations</p>
+          <h1>Location & branch management</h1>
+          <p>
+            Keep rental locations, operating hours and vehicle capacity up to
+            date.
+          </p>
+        </div>
+        <div class="head-actions">
+          <button id="exportRecords" class="control">Export CSV</button
+          ><button id="createRecord" class="control primary">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              aria-hidden="true"
+            >
+              <path d="M12 5v14M5 12h14" />
+            </svg>
+            Create branch
+          </button>
+        </div>
+      </header>
+      <div
+        id="crudNotice"
+        class="notice"
+        role="status"
+        aria-live="polite"
+      ></div>
+      <section class="stats" aria-label="Record summary">
+        <div class="stat">
+          <span>Total records</span><strong id="totalStat">—</strong>
+        </div>
+        <div class="stat">
+          <span>Active / open</span><strong id="activeStat">—</strong>
+        </div>
+        <div class="stat">
+          <span>Closed / inactive</span><strong id="archivedStat">—</strong>
+        </div>
+      </section>
+      <section
+        class="workspace-panel"
+        aria-label="Location & branch management records"
+      >
+        <div class="toolbar">
+          <input
+            id="crudSearch"
+            type="search"
+            placeholder="Search records…"
+            aria-label="Search records"
+          />
+          <div id="userTabs" hidden>
+            <div class="tabs">
+              <button class="control small selected" data-segment="all">
+                All</button
+              ><button class="control small" data-segment="staff">Staff</button
+              ><button class="control small" data-segment="customers">
+                Customers
+              </button>
+            </div>
+          </div>
+          <label
+            ><input type="checkbox" id="showArchived" /> Show all
+            statuses</label
+          ><button id="refreshRecords" class="control">Refresh</button>
+        </div>
+        <p class="table-hint">
+          Swipe the table to see more columns and Edit actions.
+        </p>
+        <div
+          class="table-scroll"
+          tabindex="0"
+          aria-label="Scrollable records table"
+        >
+          <table class="crud-table">
+            <thead>
+              <tr>
+                <th scope="col">Branch</th>
+                <th scope="col">Address</th>
+                <th scope="col">Contact</th>
+                <th scope="col">Hours</th>
+                <th scope="col">Capacity</th>
+                <th scope="col">Status</th>
+                <th scope="col">Actions</th>
+              </tr>
+            </thead>
+            <tbody id="crudRows">
+              <tr>
+                <td class="empty" colspan="7">Loading records…</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="count-label" id="recordCount">Connecting…</div>
+      </section>
+      <p class="user-note">
+        Use the pencil Edit button to update a record. Show all statuses to
+        review retained history.
+      </p>
+    </main>
+    <dialog id="editDialog" class="crud-dialog" aria-labelledby="formTitle">
+      <div class="dialog-head">
+        <h2 id="formTitle">Edit record</h2>
+        <button class="control small" data-close aria-label="Close edit form">
+          ✕
+        </button>
+      </div>
+      <form id="recordForm" class="crud-form">
+        <div id="formNotice" class="notice" role="alert"></div>
+        <div id="fields" class="form-grid"></div>
+        <div class="dialog-foot">
+          <button type="button" class="control" data-close>Cancel</button
+          ><button type="submit" id="saveRecord" class="control primary">
+            Save changes
+          </button>
+        </div>
+      </form>
+    </dialog>
+    <dialog
+      id="confirmDialog"
+      class="crud-dialog"
+      aria-labelledby="confirmTitle"
+    >
+      <div class="dialog-head"><h2 id="confirmTitle">Confirm action</h2></div>
+      <p id="confirmText" class="dialog-copy"></p>
+      <form method="dialog" class="confirm-buttons">
+        <button class="control" value="cancel" autofocus>Keep record</button
+        ><button class="control danger" value="confirm">Confirm</button>
+      </form>
+    </dialog>
+    <script src="../assets/js/auth.js"></script>
+    <script src="../assets/js/components.js"></script>
+    <script src="../assets/js/crud-ui.js"></script>
+    <script src="../assets/js/branches.js"></script>
+  </body>
+</html>
