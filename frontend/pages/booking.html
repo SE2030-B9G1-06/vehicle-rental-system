@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Complete Booking - DriveRentals</title>
+    <link
+      href="../assets/vendor/bootstrap/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/workspace.css" />
+  </head>
+  <body
+    class="workspace-page"
+    style="--workspace-image: url(&quot;/assets/images/booking_st.jpg&quot;)"
+  >
+    <div id="navbar-placeholder"></div>
+    <main class="container py-5">
+      <div class="mb-4">
+        <span class="text-uppercase small fw-bold text-secondary"
+          >Secure booking</span
+        >
+        <h1 class="section-title h2">Complete Your Booking</h1>
+      </div>
+      <div class="row g-4">
+        <section class="col-lg-8">
+          <div class="card module-card">
+            <div class="card-body p-4 p-md-5">
+              <div class="feedback-message mb-3" id="bookingFeedback"></div>
+              <form id="bookingForm">
+                <h5 class="fw-bold mb-4">Rental details</h5>
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label for="pickupDate" class="form-label"
+                      >Pickup date and time</label
+                    ><input
+                      type="datetime-local"
+                      class="form-control"
+                      id="pickupDate"
+                      required
+                    />
+                  </div>
+                  <div class="col-md-6">
+                    <label for="returnDate" class="form-label"
+                      >Return date and time</label
+                    ><input
+                      type="datetime-local"
+                      class="form-control"
+                      id="returnDate"
+                      required
+                    />
+                  </div>
+                  <div class="col-md-6">
+                    <label for="pickupBranch" class="form-label"
+                      >Pickup branch</label
+                    ><select class="form-select" id="pickupBranch" required>
+                      <option value="">Loading branches...</option>
+                    </select>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="returnBranch" class="form-label"
+                      >Return branch</label
+                    ><select class="form-select" id="returnBranch" required>
+                      <option value="">Loading branches...</option>
+                    </select>
+                  </div>
+                  <div class="col-12">
+                    <label for="promotionId" class="form-label"
+                      >Promotion (optional)</label
+                    ><select id="promotionId" class="form-select">
+                      <option value="">No promotion</option></select
+                    ><small class="text-secondary"
+                      >Availability and usage limits are verified when you
+                      confirm.</small
+                    >
+                  </div>
+                </div>
+                <button
+                  type="submit"
+                  class="btn btn-accent w-100 py-2 mt-4"
+                  id="confirmBookingButton"
+                >
+                  Confirm reservation
+                </button>
+              </form>
+            </div>
+          </div>
+        </section>
+        <aside class="col-lg-4">
+          <div class="card module-card">
+            <div class="card-body p-4">
+              <h5 class="fw-bold">Booking summary</h5>
+              <div id="selectedVehicle" class="py-3 text-secondary">
+                Loading selected vehicle...
+              </div>
+              <hr />
+              <div class="d-flex justify-content-between mb-2">
+                <span class="text-secondary">Daily rate</span
+                ><strong id="dailyRate">-</strong>
+              </div>
+              <div class="d-flex justify-content-between mb-2">
+                <span class="text-secondary">Estimated days</span
+                ><strong id="estDays">-</strong>
+              </div>
+              <hr />
+              <div class="d-flex justify-content-between">
+                <span class="fw-bold">Estimated total</span
+                ><strong class="text-primary" id="totalPrice">-</strong>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </main>
+    <script src="../assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/auth.js"></script>
+    <script src="../assets/js/components.js"></script>
+    <script src="../assets/js/booking.js"></script>
+  </body>
+</html>

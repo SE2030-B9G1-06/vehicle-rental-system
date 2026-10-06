@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Login - DriveRentals</title>
+
+    <link
+      href="../assets/vendor/bootstrap/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../assets/css/style.css" />
+
+    <style>
+      body {
+        min-height: 100vh;
+        margin: 0;
+
+        background:
+          linear-gradient(rgba(5, 15, 35, 0.55), rgba(5, 15, 35, 0.55)),
+          url("../assets/images/login-bg.jpg");
+
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        padding: 30px;
+      }
+
+      .login-wrapper {
+        width: 100%;
+        max-width: 430px;
+      }
+
+      .portal-title {
+        text-align: center;
+        color: white;
+
+        margin-bottom: 25px;
+      }
+
+      .portal-title h1 {
+        font-size: 42px;
+        font-weight: 800;
+
+        margin-bottom: 10px;
+
+        letter-spacing: -1px;
+      }
+
+      .portal-title p {
+        font-size: 17px;
+        color: rgba(255, 255, 255, 0.9);
+      }
+
+      .portal-tagline {
+        color: white;
+        text-align: center;
+
+        font-size: 13px;
+
+        letter-spacing: 4px;
+
+        margin-bottom: 25px;
+      }
+
+      .login-card {
+        background: rgba(255, 255, 255, 0.96);
+
+        border-radius: 20px;
+
+        padding: 35px;
+
+        box-shadow: 0 25px 70px rgba(0, 0, 0, 0.45);
+      }
+
+      .login-card h3 {
+        text-align: center;
+
+        font-weight: 800;
+
+        color: #0b1b3a;
+
+        margin-bottom: 8px;
+      }
+
+      .login-card .subtitle {
+        text-align: center;
+
+        color: #64748b;
+
+        margin-bottom: 25px;
+      }
+
+      .form-control {
+        height: 52px;
+
+        border-radius: 12px;
+
+        padding-left: 18px;
+      }
+
+      .btn-login {
+        height: 52px;
+
+        border-radius: 12px;
+
+        background: #ff7a28;
+
+        border: none;
+
+        color: white;
+
+        font-weight: 700;
+
+        font-size: 17px;
+      }
+
+      .btn-login:hover {
+        background: #ed6415;
+      }
+
+      .back-home {
+        text-align: center;
+
+        margin-top: 20px;
+      }
+
+      .back-home a {
+        text-decoration: none;
+
+        color: #334155;
+      }
+
+      .back-home a:hover {
+        color: #ff7a28;
+      }
+    </style>
+
+    <link rel="stylesheet" href="../assets/css/workspace.css" />
+  </head>
+
+  <body>
+    <div class="login-wrapper">
+      <div class="portal-title">
+        <h1>DriveRentals Portal</h1>
+
+        <p>Customer and authorized staff access</p>
+      </div>
+
+      <div class="portal-tagline">YOUR ROAD. YOUR CHOICE.</div>
+
+      <div class="login-card">
+        <h3>Welcome Back</h3>
+
+        <div class="subtitle">Sign in to continue to DriveRentals</div>
+
+        <form id="loginForm">
+          <div class="feedback-message mb-3" id="loginFeedback"></div>
+
+          <div class="mb-3">
+            <label for="email" class="form-label"> Email Address </label>
+
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              placeholder="Enter your email"
+              required
+            />
+          </div>
+
+          <div class="mb-3">
+            <label for="password" class="form-label"> Password </label>
+
+            <input
+              type="password"
+              class="form-control"
+              id="password"
+              placeholder="Enter your password"
+              required
+            />
+          </div>
+
+          <button type="submit" class="btn btn-login w-100">Sign In</button>
+        </form>
+
+        <div class="back-home">
+          <a href="../index.html"> Back to home </a>
+        </div>
+      </div>
+    </div>
+
+    <script src="../assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+
+    <script src="../assets/js/auth.js"></script>
+
+    <script src="../assets/js/login.js"></script>
+  </body>
+</html>
