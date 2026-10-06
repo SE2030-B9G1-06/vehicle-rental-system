@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Register - DriveRentals</title>
+
+    <link
+      href="../assets/vendor/bootstrap/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../assets/css/style.css" />
+
+    <style>
+      body.register-page {
+        min-height: 100vh;
+        margin: 0;
+        padding: 50px 20px;
+
+        background:
+          linear-gradient(rgba(4, 14, 38, 0.68), rgba(4, 14, 38, 0.68)),
+          url("../assets/images/login-bg.jpg");
+
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .register-wrapper {
+        width: 100%;
+      }
+
+      .register-card {
+        background: rgba(255, 255, 255, 0.96);
+        border: none;
+        border-radius: 20px;
+        padding: 35px;
+        box-shadow: 0 25px 70px rgba(0, 0, 0, 0.45);
+        backdrop-filter: blur(8px);
+      }
+
+      .register-card h3 {
+        color: #071a3d !important;
+        font-size: 32px;
+        font-weight: 800;
+      }
+
+      .register-card .form-label {
+        color: #071a3d;
+        font-weight: 500;
+        margin-bottom: 7px;
+      }
+
+      .register-card .form-control {
+        min-height: 49px;
+        border: 1px solid #d7dce5;
+        border-radius: 12px;
+        padding: 10px 15px;
+        background-color: rgba(248, 250, 253, 0.95);
+      }
+
+      .register-card .form-control:focus {
+        background-color: #ffffff;
+        border-color: #ff7628;
+        box-shadow: 0 0 0 0.2rem rgba(255, 118, 40, 0.18);
+      }
+
+      .register-card .btn-accent {
+        min-height: 50px;
+        border: none;
+        border-radius: 12px;
+        background-color: #ff7628;
+        color: #ffffff;
+        font-size: 17px;
+        font-weight: 700;
+        transition:
+          background-color 0.2s ease,
+          transform 0.2s ease;
+      }
+
+      .register-card .btn-accent:hover {
+        background-color: #e96318;
+        color: #ffffff;
+        transform: translateY(-1px);
+      }
+
+      .login-link {
+        color: #071a3d;
+      }
+
+      .login-link:hover {
+        color: #ff7628;
+      }
+
+      @media (max-width: 767px) {
+        body.register-page {
+          align-items: flex-start;
+          padding: 25px 12px;
+          background-position: center;
+        }
+
+        .register-card {
+          padding: 25px 20px;
+          border-radius: 16px;
+        }
+
+        .register-card h3 {
+          font-size: 27px;
+        }
+      }
+    </style>
+    <link rel="stylesheet" href="../assets/css/workspace.css" />
+  </head>
+
+  <body class="register-page">
+    <div class="container register-wrapper">
+      <div class="row justify-content-center">
+        <div class="col-md-7 col-lg-5">
+          <div class="register-card">
+            <div class="text-center mb-4">
+              <h3>Create an Account</h3>
+
+              <p class="text-muted small mb-0">
+                Join DriveRentals to book your next vehicle
+              </p>
+            </div>
+
+            <form id="registerForm">
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label for="firstName" class="form-label"> First Name </label>
+
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="firstName"
+                    required
+                  />
+                </div>
+
+                <div class="col-md-6 mb-3">
+                  <label for="lastName" class="form-label"> Last Name </label>
+
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="lastName"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label for="email" class="form-label"> Email Address </label>
+
+                <input type="email" class="form-control" id="email" required />
+              </div>
+
+              <div class="mb-3">
+                <label for="contactNumber" class="form-label">
+                  Contact Number
+                </label>
+
+                <input
+                  type="tel"
+                  class="form-control"
+                  id="contactNumber"
+                  required
+                />
+              </div>
+
+              <div class="mb-3">
+                <label for="drivingLicenceNumber" class="form-label">
+                  Driving Licence Number
+                </label>
+
+                <input
+                  type="text"
+                  class="form-control"
+                  id="drivingLicenceNumber"
+                  required
+                />
+              </div>
+
+              <div class="mb-3">
+                <label for="password" class="form-label"> Password </label>
+
+                <input
+                  type="password"
+                  class="form-control"
+                  id="password"
+                  required
+                />
+              </div>
+
+              <button type="submit" class="btn btn-accent w-100 py-2">
+                Register Now
+              </button>
+            </form>
+
+            <div class="text-center mt-3">
+              <a
+                href="login.html"
+                class="login-link text-decoration-none small"
+              >
+                Already have an account? Log In
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../assets/js/auth.js"></script>
+    <script src="../assets/js/register.js"></script>
+  </body>
+</html>
