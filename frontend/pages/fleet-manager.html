@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fleet Management - Nima Vehicle Rental</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body class="d-grid vh-100">
+<div class="m-auto text-center"><div class="spinner-border text-primary mb-3"></div><p>Opening fleet management...</p></div>
+<script src="../assets/js/auth.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', async () => {
+        const user = await AppAuth.requireRole(['ROLE_RENTAL_OFFICER', 'ROLE_ADMIN']);
+        if (user) window.location.replace('vehicle-management.html');
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Available Vehicles - Nima Vehicle Rental</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<div id="navbar-placeholder"></div>
+<main class="container py-5">
+    <div class="row g-4">
+        <aside class="col-lg-3">
+            <div class="card module-card sticky-lg-top" style="top: 24px">
+                <div class="card-body p-4">
+                    <h5 class="fw-bold">Filter fleet</h5>
+                    <div class="mb-3"><label class="form-label small">Branch</label><select class="form-select" id="branchFilter"><option value="">All branches</option></select></div>
+                    <div class="mb-3"><label class="form-label small">Category</label><select class="form-select" id="categoryFilter"><option value="">All categories</option></select></div>
+                    <div class="mb-3"><label class="form-label small">Pickup date</label><input class="form-control" type="date" id="pickupFilter"></div>
+                    <div class="mb-3"><label class="form-label small">Return date</label><input class="form-control" type="date" id="returnFilter"></div>
+                    <button class="btn btn-navy w-100" id="applyFilters">Apply filters</button>
+                </div>
+            </div>
+        </aside>
+        <section class="col-lg-9">
+            <div class="d-flex flex-wrap justify-content-between align-items-end gap-2 mb-4">
+                <div><h1 class="section-title h2 mb-1">Available Fleet</h1><p class="section-copy mb-0" id="resultCount">Loading vehicles...</p></div>
+                <a href="../index.html" class="btn btn-outline-navy">Change search</a>
+            </div>
+            <div class="row g-4" id="vehicle-grid"><div class="col-12 py-5 text-center"><div class="spinner-border text-primary"></div></div></div>
+        </section>
+    </div>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../assets/js/auth.js"></script>
+<script src="../assets/js/components.js"></script>
+<script src="../assets/js/vehicles.js"></script>
+</body>
+</html>
